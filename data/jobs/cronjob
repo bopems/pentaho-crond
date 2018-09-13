@@ -1,0 +1,4 @@
+* * * * * /data-integration/jobs/cronjob-transacao-varejista.sh >> /data-integration/logs/log.log 2>&1
+*/5 * * * * /data-integration/jobs/cronjob-corporativo-to-siscap.sh >> /data-integration/logs/log.log 2>&1
+*/5 * * * * /data-integration/jobs/cronjob-portal-to-siscap.sh >> /data-integration/logs/log.log 2>&1
+0 0 * * * /data-integration/jobs/cronjob-siscap-to-corporativo.sh >> /data-integration/logs/log.log 2>&1

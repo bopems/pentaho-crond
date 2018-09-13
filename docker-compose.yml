@@ -1,0 +1,12 @@
+version: '2.1'
+services:
+
+  pentaho:
+    image: bopems/pentaho-crond:latest
+    container_name: pentaho
+    hostname: pdi-kettle
+    volumes:
+      - /data/docker/volumes/pentaho/jobs/:/data-integration/jobs:Z
+      - /data/docker/volumes/pentaho/drivers/:/data-integration/drivers:Z
+      - /data/docker/volumes/pentaho/.kettle/:/data-integration/.kettle:Z
+    tty: true
