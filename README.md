@@ -33,7 +33,3 @@ Your jobs should be running properly after executing the commands.
 Create a listener to export the jobs in case of failures. Currently there is
 a method to send alerts through Pentaho in case of failure, but it depends on 
 someone configuring it.
-
-##TROUBLESHOOTING
-Remove special characters that cause /bin/bash^M: bad interpreter: No such file or directory 
-sed -i -e 's/\r$//' *.sh
