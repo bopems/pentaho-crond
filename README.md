@@ -16,15 +16,15 @@ Docker image for Pentaho Data Integration (PDI, aka Kettle) server community edi
 - Download pdi locally https://sourceforge.net/projects/pentaho/files/Data%20Integration/ (Version 7.1)
 - Unzip it and open spoon.sh/bat
 - Follow the video to create new jobs (https://www.youtube.com/watch?v=FXKLqXyuakM)
-- After creating a job and a transformation file, move them to jobs folder.
+- After creating a job and a transformation file, move them to /data/jobs folder.
 - Create a ssh file to be executed as a cron job. Example:
-```
+``` example.sh
 # #!/bin/bash
 # /data-integration/kitchen.sh -file=/data-integration/jobs/transacao_deposito_varejista.kjb
 ```
-- Edit the cronjob file to create a cron rule to your job
+- Edit the /data/jobs/cronjob file to create a cron rule to your job
 ```
-# * * * * * /data-integration/jobs/run-transacao-varejista.sh
+# * * * * * /data-integration/jobs/example.sh
 ```
 - Start PDI server
 ```
